@@ -8,19 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSUInteger, SJBorderlineType) {
-    SJBorderlineTypeNone     = 0,
-    SJBorderlineTypeTop      = 1 << 0,
-    SJBorderlineTypeLeading  = 1 << 1,
-    SJBorderlineTypeTrailing = 1 << 2,
-    SJBorderlineTypeBottom   = 1 << 3,
+typedef NS_ENUM(NSUInteger, SJBorderlineSide) {
+    SJBorderlineSideNone     = 0,
+    SJBorderlineSideTop      = 1 << 0,
+    SJBorderlineSideLeading  = 1 << 1,
+    SJBorderlineSideTrailing = 1 << 2,
+    SJBorderlineSideBottom   = 1 << 3,
 };
 
 @interface SJBorderlineView : UIView
 
-+ (instancetype)borderlineViewWithType:(SJBorderlineType)type startMargin:(CGFloat)startMargin endMargin:(CGFloat)endMargin lineColor:(UIColor *)color;
++ (instancetype)borderlineViewWithSide:(SJBorderlineSide)side startMargin:(CGFloat)startMargin endMargin:(CGFloat)endMargin lineColor:(UIColor *)color;
 
-+ (instancetype)borderlineViewWithType:(SJBorderlineType)type startMargin:(CGFloat)startMargin endMargin:(CGFloat)endMargin lineColor:(UIColor *)color lineWidth:(CGFloat)width;
++ (instancetype)borderlineViewWithSide:(SJBorderlineSide)side startMargin:(CGFloat)startMargin endMargin:(CGFloat)endMargin lineColor:(UIColor *)color lineWidth:(CGFloat)width;
 
 @end
 
