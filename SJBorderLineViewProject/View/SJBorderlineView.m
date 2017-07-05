@@ -26,6 +26,7 @@
 
 + (instancetype)borderlineViewWithSide:(SJBorderlineSide)type startMargin:(CGFloat)startMargin endMargin:(CGFloat)endMargin lineColor:(UIColor *)color lineWidth:(CGFloat)width {
     SJBorderlineView *view = [SJBorderlineView new];
+    view.backgroundColor = [UIColor whiteColor];
     view.type = type;
     view.startMargin = startMargin;
     view.endMargin = endMargin;
