@@ -43,7 +43,26 @@
     CGPoint movePoint = CGPointZero;
     CGPoint addLineToPoint = CGPointZero;
     
-    if      ( 0 == self.type ) return;
+    if ( 0 == self.type ) return;
+    if ( SJBorderlineSideAll == ( self.type & SJBorderlineSideAll ) ) {
+        movePoint = CGPointMake(self.startMargin, 0);
+        addLineToPoint = CGPointMake(rect.size.width - self.endMargin, 0);
+        [self drawLineWithBezierPath:bezierPath MovePoint:movePoint addLineToPoint:addLineToPoint];
+        
+        movePoint = CGPointMake(0, self.startMargin);
+        addLineToPoint = CGPointMake(0, rect.size.height - self.endMargin);
+        [self drawLineWithBezierPath:bezierPath MovePoint:movePoint addLineToPoint:addLineToPoint];
+        
+        movePoint = CGPointMake(self.startMargin, rect.size.height);
+        addLineToPoint = CGPointMake(rect.size.width - self.endMargin, rect.size.height);
+        [self drawLineWithBezierPath:bezierPath MovePoint:movePoint addLineToPoint:addLineToPoint];
+        
+        movePoint = CGPointMake(rect.size.width, self.startMargin);
+        addLineToPoint = CGPointMake(rect.size.width, rect.size.height - self.endMargin);
+        [self drawLineWithBezierPath:bezierPath MovePoint:movePoint addLineToPoint:addLineToPoint];
+        return;
+    }
+    
     if ( SJBorderlineSideTop == ( self.type & SJBorderlineSideTop ) ) {
         movePoint = CGPointMake(self.startMargin, 0);
         addLineToPoint = CGPointMake(rect.size.width - self.endMargin, 0);

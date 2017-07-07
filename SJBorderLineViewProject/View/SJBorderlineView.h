@@ -14,6 +14,7 @@ typedef NS_ENUM(NSUInteger, SJBorderlineSide) {
     SJBorderlineSideLeading  = 1 << 1,
     SJBorderlineSideTrailing = 1 << 2,
     SJBorderlineSideBottom   = 1 << 3,
+    SJBorderlineSideAll      = 1 << 4,
 };
 
 @interface SJBorderlineView : UIView
