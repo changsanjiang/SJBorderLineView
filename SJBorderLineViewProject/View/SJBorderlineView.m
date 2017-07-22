@@ -20,13 +20,13 @@
 
 @implementation SJBorderlineView
 
-+ (instancetype)borderlineViewWithSide:(SJBorderlineSide)type startMargin:(CGFloat)startMargin endMargin:(CGFloat)endMargin lineColor:(UIColor *)color {
-    return [self borderlineViewWithSide:type startMargin:startMargin endMargin:endMargin lineColor:color lineWidth:1.0];
++ (instancetype)borderlineViewWithSide:(SJBorderlineSide)type startMargin:(CGFloat)startMargin endMargin:(CGFloat)endMargin lineColor:(UIColor *)color backgroundColor:(UIColor *)backgroundColor {
+    return [self borderlineViewWithSide:type startMargin:startMargin endMargin:endMargin lineColor:color lineWidth:1.0 backgroundColor:backgroundColor];
 }
 
-+ (instancetype)borderlineViewWithSide:(SJBorderlineSide)type startMargin:(CGFloat)startMargin endMargin:(CGFloat)endMargin lineColor:(UIColor *)color lineWidth:(CGFloat)width {
++ (instancetype)borderlineViewWithSide:(SJBorderlineSide)type startMargin:(CGFloat)startMargin endMargin:(CGFloat)endMargin lineColor:(UIColor *)color lineWidth:(CGFloat)width backgroundColor:(UIColor *)backgroundColor {
     SJBorderlineView *view = [SJBorderlineView new];
-    view.backgroundColor = [UIColor whiteColor];
+    view.backgroundColor = backgroundColor;
     view.type = type;
     view.startMargin = startMargin;
     view.endMargin = endMargin;
