@@ -7,4 +7,4 @@
     [self.view addSubview:lineView];
 ```
 
-![GitHub set up-140](https://github.com/changsanjiang/SJBorderLineView/blob/master/SJBorderLineViewProject/sample.png)
+![GitHub set up-w140](https://github.com/changsanjiang/SJBorderLineView/blob/master/SJBorderLineViewProject/sample.png)
