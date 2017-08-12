@@ -23,5 +23,7 @@ typedef NS_ENUM(NSUInteger, SJBorderlineSide) {
 
 + (instancetype)borderlineViewWithSide:(SJBorderlineSide)side startMargin:(CGFloat)startMargin endMargin:(CGFloat)endMargin lineColor:(UIColor *)color lineWidth:(CGFloat)width backgroundColor:(UIColor *)backgroundColor;
 
+@property (nonatomic, strong, readwrite) UIColor *lineColor;
+
 @end
 

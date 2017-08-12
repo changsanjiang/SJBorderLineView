@@ -13,7 +13,6 @@
 @property (nonatomic, assign, readwrite) SJBorderlineSide type;
 @property (nonatomic, assign, readwrite) CGFloat startMargin;
 @property (nonatomic, assign, readwrite) CGFloat endMargin;
-@property (nonatomic, strong, readwrite) UIColor *lineColor;
 @property (nonatomic, assign, readwrite) CGFloat lineWidth;
 
 @end
@@ -76,6 +75,11 @@
     [bezierPath addLineToPoint:addLineToPoint];
     [_lineColor setStroke];
     [bezierPath strokeWithBlendMode:kCGBlendModeCopy alpha:1];
+}
+
+- (void)setLineColor:(UIColor *)lineColor {
+    _lineColor = lineColor;
+    [self setNeedsDisplay];
 }
 
 @end
