@@ -67,9 +67,9 @@
 			children = (
 				774055E71EFA3CD500713440 /* AppDelegate.h */,
 				774055E81EFA3CD500713440 /* AppDelegate.m */,
-				774055FE1EFA3CF300713440 /* View */,
 				774055EA1EFA3CD500713440 /* ViewController.h */,
 				774055EB1EFA3CD500713440 /* ViewController.m */,
+				774055FE1EFA3CF300713440 /* View */,
 				778252B31F3F0F00006F5156 /* sample1.png */,
 				773596501F051DD300AD3535 /* sample.png */,
 				774055ED1EFA3CD500713440 /* Main.storyboard */,

@@ -43,38 +43,38 @@
     CGPoint movePoint = CGPointZero;
     CGPoint addLineToPoint = CGPointZero;
     
-    if ( 0 == self.type ) return;
-    if ( SJBorderlineSideAll == ( self.type & SJBorderlineSideAll ) ) {
-        self.type = SJBorderlineSideTop | SJBorderlineSideLeading | SJBorderlineSideBottom | SJBorderlineSideTrailing;
+    if ( 0 == _type ) return;
+    if ( SJBorderlineSideAll == ( _type & SJBorderlineSideAll ) ) {
+        _type = SJBorderlineSideTop | SJBorderlineSideLeading | SJBorderlineSideBottom | SJBorderlineSideTrailing;
     }
     
-    if ( SJBorderlineSideTop == ( self.type & SJBorderlineSideTop ) ) {
-        movePoint = CGPointMake(self.startMargin, 0);
-        addLineToPoint = CGPointMake(rect.size.width - self.endMargin, 0);
+    if ( SJBorderlineSideTop == ( _type & SJBorderlineSideTop ) ) {
+        movePoint = CGPointMake(_startMargin, 0);
+        addLineToPoint = CGPointMake(rect.size.width - _endMargin, 0);
         [self drawLineWithBezierPath:bezierPath MovePoint:movePoint addLineToPoint:addLineToPoint];
     }
-    if ( SJBorderlineSideLeading == ( self.type & SJBorderlineSideLeading ) ) {
-        movePoint = CGPointMake(0, self.startMargin);
-        addLineToPoint = CGPointMake(0, rect.size.height - self.endMargin);
+    if ( SJBorderlineSideLeading == ( _type & SJBorderlineSideLeading ) ) {
+        movePoint = CGPointMake(0, _startMargin);
+        addLineToPoint = CGPointMake(0, rect.size.height - _endMargin);
         [self drawLineWithBezierPath:bezierPath MovePoint:movePoint addLineToPoint:addLineToPoint];
     }
-    if ( SJBorderlineSideBottom == ( self.type & SJBorderlineSideBottom ) ) {
-        movePoint = CGPointMake(self.startMargin, rect.size.height);
-        addLineToPoint = CGPointMake(rect.size.width - self.endMargin, rect.size.height);
+    if ( SJBorderlineSideBottom == ( _type & SJBorderlineSideBottom ) ) {
+        movePoint = CGPointMake(_startMargin, rect.size.height);
+        addLineToPoint = CGPointMake(rect.size.width - _endMargin, rect.size.height);
         [self drawLineWithBezierPath:bezierPath MovePoint:movePoint addLineToPoint:addLineToPoint];
     }
-    if ( SJBorderlineSideTrailing == ( self.type & SJBorderlineSideTrailing ) ) {
-        movePoint = CGPointMake(rect.size.width, self.startMargin);
-        addLineToPoint = CGPointMake(rect.size.width, rect.size.height - self.endMargin);
+    if ( SJBorderlineSideTrailing == ( _type & SJBorderlineSideTrailing ) ) {
+        movePoint = CGPointMake(rect.size.width, _startMargin);
+        addLineToPoint = CGPointMake(rect.size.width, rect.size.height - _endMargin);
         [self drawLineWithBezierPath:bezierPath MovePoint:movePoint addLineToPoint:addLineToPoint];
     }
 }
 
 - (void)drawLineWithBezierPath:(UIBezierPath *)bezierPath MovePoint:(CGPoint)movePoint addLineToPoint:(CGPoint)addLineToPoint {
-    bezierPath.lineWidth = self.lineWidth * 2;
+    bezierPath.lineWidth = _lineWidth * 2;
     [bezierPath moveToPoint:movePoint];
     [bezierPath addLineToPoint:addLineToPoint];
-    [self.lineColor setStroke];
+    [_lineColor setStroke];
     [bezierPath strokeWithBlendMode:kCGBlendModeCopy alpha:1];
 }
 
