@@ -14,8 +14,8 @@
 		774055EF1EFA3CD500713440 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 774055ED1EFA3CD500713440 /* Main.storyboard */; };
 		774055F11EFA3CD500713440 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 774055F01EFA3CD500713440 /* Assets.xcassets */; };
 		774055F41EFA3CD500713440 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 774055F21EFA3CD500713440 /* LaunchScreen.storyboard */; };
-		774056011EFA3CF300713440 /* SJBorderlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 774056001EFA3CF300713440 /* SJBorderlineView.m */; };
 		778252B61F3F10E5006F5156 /* sample1.png in Resources */ = {isa = PBXBuildFile; fileRef = 778252B51F3F10E5006F5156 /* sample1.png */; };
+		778252E91F3F275C006F5156 /* SJBorderlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 778252E81F3F275C006F5156 /* SJBorderlineView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,9 +30,9 @@
 		774055F01EFA3CD500713440 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		774055F31EFA3CD500713440 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		774055F51EFA3CD500713440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		774055FF1EFA3CF300713440 /* SJBorderlineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJBorderlineView.h; sourceTree = "<group>"; };
-		774056001EFA3CF300713440 /* SJBorderlineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJBorderlineView.m; sourceTree = "<group>"; };
 		778252B51F3F10E5006F5156 /* sample1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sample1.png; sourceTree = "<group>"; };
+		778252E71F3F275C006F5156 /* SJBorderlineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJBorderlineView.h; sourceTree = "<group>"; };
+		778252E81F3F275C006F5156 /* SJBorderlineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJBorderlineView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +69,7 @@
 				774055E81EFA3CD500713440 /* AppDelegate.m */,
 				774055EA1EFA3CD500713440 /* ViewController.h */,
 				774055EB1EFA3CD500713440 /* ViewController.m */,
-				774055FE1EFA3CF300713440 /* View */,
+				778252E61F3F275C006F5156 /* SJBorderLineView */,
 				773596501F051DD300AD3535 /* sample.png */,
 				778252B51F3F10E5006F5156 /* sample1.png */,
 				774055ED1EFA3CD500713440 /* Main.storyboard */,
@@ -89,14 +89,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		774055FE1EFA3CF300713440 /* View */ = {
+		778252E61F3F275C006F5156 /* SJBorderLineView */ = {
 			isa = PBXGroup;
 			children = (
-				774055FF1EFA3CF300713440 /* SJBorderlineView.h */,
-				774056001EFA3CF300713440 /* SJBorderlineView.m */,
+				778252E71F3F275C006F5156 /* SJBorderlineView.h */,
+				778252E81F3F275C006F5156 /* SJBorderlineView.m */,
 			);
-			path = View;
-			sourceTree = "<group>";
+			path = SJBorderLineView;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -175,7 +175,7 @@
 				774055EC1EFA3CD500713440 /* ViewController.m in Sources */,
 				774055E91EFA3CD500713440 /* AppDelegate.m in Sources */,
 				774055E61EFA3CD500713440 /* main.m in Sources */,
-				774056011EFA3CF300713440 /* SJBorderlineView.m in Sources */,
+				778252E91F3F275C006F5156 /* SJBorderlineView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
