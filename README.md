@@ -6,5 +6,4 @@
     lineView.backgroundColor = [UIColor grayColor];
     [self.view addSubview:lineView];
 ```
-
-![GitHub set up](https://github.com/changsanjiang/SJBorderLineView/blob/master/SJBorderLineViewProject/sample.png)
+<img src="https://github.com/changsanjiang/SJBorderLineView/blob/master/SJBorderLineViewProject/sample.png" width="40%" />
