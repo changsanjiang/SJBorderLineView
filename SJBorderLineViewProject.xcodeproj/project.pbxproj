@@ -15,7 +15,7 @@
 		774055F11EFA3CD500713440 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 774055F01EFA3CD500713440 /* Assets.xcassets */; };
 		774055F41EFA3CD500713440 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 774055F21EFA3CD500713440 /* LaunchScreen.storyboard */; };
 		774056011EFA3CF300713440 /* SJBorderlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 774056001EFA3CF300713440 /* SJBorderlineView.m */; };
-		778252B41F3F0F00006F5156 /* sample1.png in Resources */ = {isa = PBXBuildFile; fileRef = 778252B31F3F0F00006F5156 /* sample1.png */; };
+		778252B61F3F10E5006F5156 /* sample1.png in Resources */ = {isa = PBXBuildFile; fileRef = 778252B51F3F10E5006F5156 /* sample1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +32,7 @@
 		774055F51EFA3CD500713440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		774055FF1EFA3CF300713440 /* SJBorderlineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJBorderlineView.h; sourceTree = "<group>"; };
 		774056001EFA3CF300713440 /* SJBorderlineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJBorderlineView.m; sourceTree = "<group>"; };
-		778252B31F3F0F00006F5156 /* sample1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sample1.png; path = ../../../../Desktop/sample1.png; sourceTree = "<group>"; };
+		778252B51F3F10E5006F5156 /* sample1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sample1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +70,8 @@
 				774055EA1EFA3CD500713440 /* ViewController.h */,
 				774055EB1EFA3CD500713440 /* ViewController.m */,
 				774055FE1EFA3CF300713440 /* View */,
-				778252B31F3F0F00006F5156 /* sample1.png */,
 				773596501F051DD300AD3535 /* sample.png */,
+				778252B51F3F10E5006F5156 /* sample1.png */,
 				774055ED1EFA3CD500713440 /* Main.storyboard */,
 				774055F01EFA3CD500713440 /* Assets.xcassets */,
 				774055F21EFA3CD500713440 /* LaunchScreen.storyboard */,
@@ -160,7 +160,7 @@
 				774055F41EFA3CD500713440 /* LaunchScreen.storyboard in Resources */,
 				774055F11EFA3CD500713440 /* Assets.xcassets in Resources */,
 				774055EF1EFA3CD500713440 /* Main.storyboard in Resources */,
-				778252B41F3F0F00006F5156 /* sample1.png in Resources */,
+				778252B61F3F10E5006F5156 /* sample1.png in Resources */,
 				773596511F051DD300AD3535 /* sample.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
