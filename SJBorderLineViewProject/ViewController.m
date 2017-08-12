@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    SJBorderlineView *lineView = [SJBorderlineView borderlineViewWithSide:SJBorderlineSideAll startMargin:10 endMargin:10 lineColor:[UIColor redColor] lineWidth:5];
+    SJBorderlineView *lineView = [SJBorderlineView borderlineViewWithSide:SJBorderlineSideAll startMargin:10 endMargin:10 lineColor:[UIColor redColor] lineWidth:5 backgroundColor:[UIColor greenColor]];
     lineView.frame = CGRectMake(20, 100, 200, 35);
     lineView.backgroundColor = [UIColor grayColor];
     [self.view addSubview:lineView];
