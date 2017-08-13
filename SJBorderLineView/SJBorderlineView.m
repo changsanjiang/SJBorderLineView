@@ -10,7 +10,6 @@
 
 @interface SJBorderlineView ()
 
-@property (nonatomic, assign, readwrite) SJBorderlineSide type;
 @property (nonatomic, assign, readwrite) CGFloat startMargin;
 @property (nonatomic, assign, readwrite) CGFloat endMargin;
 @property (nonatomic, assign, readwrite) CGFloat lineWidth;
@@ -19,14 +18,14 @@
 
 @implementation SJBorderlineView
 
-+ (instancetype)borderlineViewWithSide:(SJBorderlineSide)type startMargin:(CGFloat)startMargin endMargin:(CGFloat)endMargin lineColor:(UIColor *)color backgroundColor:(UIColor *)backgroundColor {
-    return [self borderlineViewWithSide:type startMargin:startMargin endMargin:endMargin lineColor:color lineWidth:1.0 backgroundColor:backgroundColor];
++ (instancetype)borderlineViewWithSide:(SJBorderlineSide)side startMargin:(CGFloat)startMargin endMargin:(CGFloat)endMargin lineColor:(UIColor *)color backgroundColor:(UIColor *)backgroundColor {
+    return [self borderlineViewWithSide:side startMargin:startMargin endMargin:endMargin lineColor:color lineWidth:1.0 backgroundColor:backgroundColor];
 }
 
-+ (instancetype)borderlineViewWithSide:(SJBorderlineSide)type startMargin:(CGFloat)startMargin endMargin:(CGFloat)endMargin lineColor:(UIColor *)color lineWidth:(CGFloat)width backgroundColor:(UIColor *)backgroundColor {
++ (instancetype)borderlineViewWithSide:(SJBorderlineSide)side startMargin:(CGFloat)startMargin endMargin:(CGFloat)endMargin lineColor:(UIColor *)color lineWidth:(CGFloat)width backgroundColor:(UIColor *)backgroundColor {
     SJBorderlineView *view = [SJBorderlineView new];
     view.backgroundColor = backgroundColor;
-    view.type = type;
+    view.side = side;
     view.startMargin = startMargin;
     view.endMargin = endMargin;
     view.lineColor = color;
@@ -42,27 +41,27 @@
     CGPoint movePoint = CGPointZero;
     CGPoint addLineToPoint = CGPointZero;
     
-    if ( 0 == _type ) return;
-    if ( SJBorderlineSideAll == ( _type & SJBorderlineSideAll ) ) {
-        _type = SJBorderlineSideTop | SJBorderlineSideLeading | SJBorderlineSideBottom | SJBorderlineSideTrailing;
+    if ( 0 == _side ) return;
+    if ( SJBorderlineSideAll == ( _side & SJBorderlineSideAll ) ) {
+        _side = SJBorderlineSideTop | SJBorderlineSideLeading | SJBorderlineSideBottom | SJBorderlineSideTrailing;
     }
     
-    if ( SJBorderlineSideTop == ( _type & SJBorderlineSideTop ) ) {
+    if ( SJBorderlineSideTop == ( _side & SJBorderlineSideTop ) ) {
         movePoint = CGPointMake(_startMargin, 0);
         addLineToPoint = CGPointMake(rect.size.width - _endMargin, 0);
         [self drawLineWithBezierPath:bezierPath MovePoint:movePoint addLineToPoint:addLineToPoint];
     }
-    if ( SJBorderlineSideLeading == ( _type & SJBorderlineSideLeading ) ) {
+    if ( SJBorderlineSideLeading == ( _side & SJBorderlineSideLeading ) ) {
         movePoint = CGPointMake(0, _startMargin);
         addLineToPoint = CGPointMake(0, rect.size.height - _endMargin);
         [self drawLineWithBezierPath:bezierPath MovePoint:movePoint addLineToPoint:addLineToPoint];
     }
-    if ( SJBorderlineSideBottom == ( _type & SJBorderlineSideBottom ) ) {
+    if ( SJBorderlineSideBottom == ( _side & SJBorderlineSideBottom ) ) {
         movePoint = CGPointMake(_startMargin, rect.size.height);
         addLineToPoint = CGPointMake(rect.size.width - _endMargin, rect.size.height);
         [self drawLineWithBezierPath:bezierPath MovePoint:movePoint addLineToPoint:addLineToPoint];
     }
-    if ( SJBorderlineSideTrailing == ( _type & SJBorderlineSideTrailing ) ) {
+    if ( SJBorderlineSideTrailing == ( _side & SJBorderlineSideTrailing ) ) {
         movePoint = CGPointMake(rect.size.width, _startMargin);
         addLineToPoint = CGPointMake(rect.size.width, rect.size.height - _endMargin);
         [self drawLineWithBezierPath:bezierPath MovePoint:movePoint addLineToPoint:addLineToPoint];
@@ -79,6 +78,11 @@
 
 - (void)setLineColor:(UIColor *)lineColor {
     _lineColor = lineColor;
+    [self setNeedsDisplay];
+}
+
+- (void)setSide:(SJBorderlineSide)side {
+    _side = side;
     [self setNeedsDisplay];
 }
 

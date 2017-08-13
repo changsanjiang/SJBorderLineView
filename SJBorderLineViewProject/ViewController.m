@@ -11,6 +11,8 @@
 
 @interface ViewController ()
 
+@property (nonatomic, strong) SJBorderlineView *borderView;
+
 @end
 
 @implementation ViewController
@@ -23,9 +25,19 @@
     lineView.backgroundColor = [UIColor grayColor];
     [self.view addSubview:lineView];
     
+    
+    self.borderView = lineView;
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        self.borderView.side = SJBorderlineSideTop;
+    });
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

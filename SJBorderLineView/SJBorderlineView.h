@@ -25,5 +25,8 @@ typedef NS_ENUM(NSUInteger, SJBorderlineSide) {
 
 @property (nonatomic, strong, readwrite) UIColor *lineColor;
 
+@property (nonatomic, assign, readwrite) SJBorderlineSide side;
+
+
 @end
 
