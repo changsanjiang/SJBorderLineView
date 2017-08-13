@@ -36,6 +36,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         self.borderView.side = SJBorderlineSideTop;
+        [self.borderView update];
     });
 }
 

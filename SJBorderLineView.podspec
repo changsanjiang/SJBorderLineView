@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
 s.name         = 'SJBorderLineView'
-s.version      = '0.0.2'
+s.version      = '0.0.3'
 s.summary      = 'border line.'
 s.description  = 'https://github.com/changsanjiang/SJBorderLineView/blob/master/README.md'
 s.homepage     = 'https://github.com/changsanjiang/SJBorderLineView'

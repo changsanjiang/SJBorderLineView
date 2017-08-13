@@ -12,7 +12,6 @@
 
 @property (nonatomic, assign, readwrite) CGFloat startMargin;
 @property (nonatomic, assign, readwrite) CGFloat endMargin;
-@property (nonatomic, assign, readwrite) CGFloat lineWidth;
 
 @end
 
@@ -78,12 +77,22 @@
 
 - (void)setLineColor:(UIColor *)lineColor {
     _lineColor = lineColor;
-    [self setNeedsDisplay];
 }
 
 - (void)setSide:(SJBorderlineSide)side {
     _side = side;
-    [self setNeedsDisplay];
 }
 
+- (void)setLineWidth:(CGFloat)lineWidth {
+    _lineWidth = lineWidth;
+}
+
+- (void)setStartMargin:(CGFloat)startMargin endMargin:(CGFloat)endMargin {
+    _startMargin = startMargin;
+    _endMargin = endMargin;
+}
+
+- (void)update {
+    [self setNeedsDisplay];
+}
 @end

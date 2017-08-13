@@ -23,10 +23,22 @@ typedef NS_ENUM(NSUInteger, SJBorderlineSide) {
 
 + (instancetype)borderlineViewWithSide:(SJBorderlineSide)side startMargin:(CGFloat)startMargin endMargin:(CGFloat)endMargin lineColor:(UIColor *)color lineWidth:(CGFloat)width backgroundColor:(UIColor *)backgroundColor;
 
+
+
+// MARK: Change
+
 @property (nonatomic, strong, readwrite) UIColor *lineColor;
+
+@property (nonatomic, assign, readwrite) CGFloat lineWidth;
 
 @property (nonatomic, assign, readwrite) SJBorderlineSide side;
 
+- (void)setStartMargin:(CGFloat)startMargin endMargin:(CGFloat)endMargin;
+
+/*!
+ *  if you changed property. you should call this method.
+ */
+- (void)update;
 
 @end
 
